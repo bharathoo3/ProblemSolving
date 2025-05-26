@@ -1,4 +1,4 @@
-package DailyProblems;
+package DailyProblems;//leetcode 2942
 import java.util.*;
 public class findWordContainsX {
     public static void main(String[] args) {
