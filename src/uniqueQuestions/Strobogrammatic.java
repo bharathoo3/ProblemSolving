@@ -22,7 +22,6 @@ public class Strobogrammatic {
             {
                 left++;
                 right--;
-
             }
             else
             return false;
