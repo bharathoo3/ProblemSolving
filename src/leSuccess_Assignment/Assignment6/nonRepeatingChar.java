@@ -2,7 +2,7 @@ package leSuccess_Assignment.Assignment6;
 import java.util.*;
 public class nonRepeatingChar {
     public static void main(String[] args) {
-        String str="Mountain";
+        String str="MountainM";
         System.out.println(findNonRepeatingChar(str));
     }
     static int findNonRepeatingChar(String str){
