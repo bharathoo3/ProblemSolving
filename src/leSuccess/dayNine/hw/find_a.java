@@ -8,6 +8,7 @@ public class find_a {
         // optimal way
         System.out.println(optimalWayForFindA(s,n));
     }
+    //brute force
     static int findA(String s,int n)
     {
         int[] freq=new int[26];
@@ -22,6 +23,7 @@ public class find_a {
         }
         return freq[0];
     }
+    //optimal way
     static  int optimalWayForFindA(String s,int n)
     {
         int count=0;
