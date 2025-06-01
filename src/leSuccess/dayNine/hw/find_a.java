@@ -2,10 +2,11 @@ package leSuccess.dayNine.hw;
 
 public class find_a {
     public static void main(String[] args) {
-        String s="aba";
-        int n=10;
+        String s="abaaabba";
+        int n=1000000;
+//         brute force
         System.out.println(findA(s,n));
-        // optimal way
+//         optimal way
         System.out.println(optimalWayForFindA(s,n));
     }
     //brute force
@@ -23,6 +24,7 @@ public class find_a {
         }
         return freq[0];
     }
+
     //optimal way
     static  int optimalWayForFindA(String s,int n)
     {
