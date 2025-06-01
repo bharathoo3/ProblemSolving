@@ -1,11 +1,11 @@
-package leSuccess.dayNine.hw;
+package leSuccess_Assignment.Assignment9;
 
 public class find_a {
     public static void main(String[] args) {
         String s="abaaabba";
         int n=1000000;
 //         brute force
-        System.out.println(findA(s,n));
+//        System.out.println(findA(s,n));
 //         optimal way
         System.out.println(optimalWayForFindA(s,n));
     }
