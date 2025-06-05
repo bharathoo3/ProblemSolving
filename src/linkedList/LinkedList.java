@@ -20,7 +20,7 @@ public class LinkedList {
             head=newNode;
             return;
         }
-Node ptr=head;
+        Node ptr=head;
         while(ptr.next!=null)
         {
             ptr=ptr.next;
@@ -35,12 +35,13 @@ Node ptr=head;
          list.insert(4);
          list.insert(5);
          list.insert(6);
+         //find the target element
          Node temp= list.head;
          int count=0,target=6;
          while (temp!=null) {
              if(target==temp.data)
              {
-                 System.out.println(count);
+                 System.out.print(count+" -> ");
                  break;
              }
              count++;
