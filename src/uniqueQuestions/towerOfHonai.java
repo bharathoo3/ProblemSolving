@@ -5,18 +5,17 @@ public class towerOfHonai {
     static  Stack<Integer> ausilary=new Stack<>();
     static  Stack<Integer> destination=new Stack<>();
     public static void main(String[] args) {
-        int disks=5;
+        int disks=3;
         findPath(disks);
     }
     static void findPath(int disks)
     {
         int n=(int)Math.pow(2,disks)-1;
-        ausilary.push(Integer.MAX_VALUE);
-        destination.push(Integer.MAX_VALUE);
         char s='S',a='A',d='D';
         if(disks%2==0)
         {
-
+           a='D';
+           d='A';
         }
         for(int i=disks;i>=1;i--)
             source.push(i);
@@ -45,6 +44,7 @@ public class towerOfHonai {
             v2=Integer.MAX_VALUE;
         else
             v2=stack2.pop();
+
 //        if(v1==Integer.MAX_VALUE)
 //        {
 //            stack1.push(v2);
