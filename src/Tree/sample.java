@@ -1,5 +1,5 @@
 package Tree;
-
+import java.util.*;
 public class sample {
    static Node root=null;
   static   class Node{
@@ -54,6 +54,20 @@ public class sample {
             System.out.print(root.data+" ");
         }
     }
+    static void levelorder(Node root)
+    {
+       Queue<Node> queue=new LinkedList<>();
+       queue.offer(root);
+       while(!queue.isEmpty())
+       {
+           Node ptr=queue.poll();
+           System.out.print(ptr.data+" ");
+           if(ptr.left!=null)
+               queue.offer(ptr.left);
+           if(ptr.right!=null)
+               queue.offer(ptr.right);
+       }
+    }
     public static void main(String[] args) {
         root=new Node(10);
         root.left=new Node(20);
@@ -68,6 +82,8 @@ public class sample {
         preorder();
         System.out.print("Postorder: ");
         postorder();
+        System.out.print("levelorder: ");
+        levelorder(root);
 
     }
 }
