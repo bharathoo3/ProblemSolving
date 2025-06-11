@@ -1,0 +1,78 @@
+import java.math.*
+import java.lang.Math
+import java.util.*
+
+// 1. Count vowels in a string
+def countVowels(String str) {
+    str.toList().count { it.toLowerCase() in ['a', 'e', 'i', 'o', 'u'] }
+}
+
+println countVowels("Groovy Programming")
+
+// 2. Reverse a string without using reverse()
+
+def reverseString(String str) {
+    def result = ""
+    for (int i = str.length() - 1; i >= 0; i--) {
+        result += str[i]
+    }
+    return result
+}
+
+println reverseString("KnowKode") 
+//
+// 3. Check if a number is prime
+def isPrime(int n) {
+    if (n < 2) return false
+    for (int i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i == 0) return false
+    }
+    return true
+}
+
+println isPrime(17)
+
+//4. Remove duplicates from a list
+
+def list = [1, 2, 2, 3, 4, 4, 5]
+def uniqueList = list.unique()
+println uniqueList // Output: [1, 2, 3, 4, 5]
+
+//5. Find common elements in two lists
+
+def list1 = [1, 2, 3, 4]
+def list2 = [3, 4, 5, 6]
+def common = list1.intersect(list2)
+println common
+
+//6. Check if two strings are anagrams
+
+def isAnagram(String s1, String s2) {
+    s1.toLowerCase().toList().sort() == s2.toLowerCase().toList().sort()
+}
+
+println isAnagram("listen", "silent")
+
+
+//7. Print Fibonacci series up to N terms
+
+def fibonacci(int n) {
+    def a = 0, b = 1
+    print("$a ")
+    for (int i = 1; i < n; i++) {
+        print("$b ")
+        (a, b) = [b, a + b]
+    }
+    println()
+}
+
+fibonacci(10)
+
+
+//8. Check if a string is a palindrome
+
+def isPalindrome(String str) {
+    str == str.reverse()
+}
+
+println isPalindrome("madam")
