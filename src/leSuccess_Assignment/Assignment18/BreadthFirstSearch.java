@@ -18,7 +18,6 @@ public class BreadthFirstSearch {
         adj_list.get(source).add(dest);
         adj_list.get(dest).add(source);
     }
-     List<Integer> bfs(int Vertices)
     {
         List<Integer> result=new ArrayList<>();
         Queue<Integer> qu=new LinkedList<>();
@@ -47,6 +46,5 @@ public class BreadthFirstSearch {
         bf.addEdge(1,3);
         bf.addEdge(2,4);
         bf.addEdge(3,4);
-        System.out.println(bf.bfs(0).toString());
     }
 }
