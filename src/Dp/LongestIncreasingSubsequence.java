@@ -23,4 +23,22 @@ public class LongestIncreasingSubsequence {
         }
         return maxlen;
     }
+
+    //public int lengthOfLIS(int[] nums) {
+    //        List<Integer> sub = new ArrayList<>();
+    //
+    //        for (int num : nums) {
+    //            int idx = Collections.binarySearch(sub, num);
+    //            if (idx < 0) idx = -(idx + 1);  // insertion point
+    //
+    //            if (idx == sub.size()) {
+    //                sub.add(num);  // append to subsequence
+    //            } else {
+    //                sub.set(idx, num);  // replace to keep subsequence minimal
+    //            }
+    //        }
+    //
+    //        return sub.size();
+    //    }
+
 }

@@ -2,39 +2,35 @@ package Stack;
 //232
 import java.util.*;
 public class ImplementQueueusingStacks {
-    static Stack<Integer> st1=new Stack<>();
-    static Stack<Integer> st2=new Stack<>();
+    Stack<Integer> s1=new Stack<>();
+    Stack<Integer> s2=new Stack<>();
+
     public static void main(String[] args) {
         ImplementQueueusingStacks s=new ImplementQueueusingStacks();
         s.push(1);
         s.push(2);
-
     }
-    void push(int x)
-    {
-        while(!st1.isEmpty())
+
+    public void push(int x) {
+        while(!s1.isEmpty())
+            s2.push(s1.pop());
+        s1.push(x);
+        while(!s2.isEmpty())
         {
-            st2.push(st1.pop());
-        }
-       st1.push(x);
-        while(!st2.isEmpty())
-        {
-            st1.push(st2.pop());
+            s1.push(s2.pop());
         }
     }
-    int pop()
-    {
-        return st1.pop();
-    }
-    int peek()
-    {
 
-        return st2.peek();
+    public int pop() {
+        return s1.pop();
     }
-    boolean isEmpty()
-    {
 
-        return st2.isEmpty();
+    public int peek() {
+        return s1.peek();
+    }
+
+    public boolean empty() {
+        return s1.isEmpty();
     }
 
 }
