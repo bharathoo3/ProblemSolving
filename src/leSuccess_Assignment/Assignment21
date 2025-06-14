@@ -2,9 +2,9 @@
 //Read and write to a file in Groovy. Write your name and read it back
 
 
-//def file =new File("example.txt");
-//file.text="Atam"
-//file<<"joe"
+//def file =new File("joker.txt");
+//file.text="BatMan"
+//file<<"DC"
 //println file.text;
 
 
