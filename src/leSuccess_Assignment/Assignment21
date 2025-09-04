@@ -1,0 +1,62 @@
+
+//Read and write to a file in Groovy. Write your name and read it back
+
+
+//def file =new File("joker.txt");
+//file.text="BatMan"
+//file<<"DC"
+//println file.text;
+
+
+//Use try-catch-finally to handle divide-by-zero and file-not-found errors.
+
+//try{
+//    def a=10/0;
+//    println a;
+//}catch (Exception e) {
+//    println e.message
+//}
+//finally{
+//    println "exception catched"
+//}
+
+//Use methodMissing in a class to handle any unknown method call by printing:
+//"Method {methodName} is not defined".
+
+//class person{
+//    String name;
+//    void methodMissing(String name,args){
+//        println "Method $name is not defined"
+//    }
+//
+//    void swim(){
+//        println "swiming"
+//    }
+//}
+//person obj=new person();
+//obj.swim();
+//obj.play("playing");
+
+
+//Use propertyMissing to return a default value "undefined" for any unknown property.
+
+//class person{
+//    String name;
+//    def age;
+//    void propertyMissing(String name){
+//        println "property $name is not found";
+//    }
+//}
+//person obj=new person();
+//obj.id;
+
+//Create a Groovy class that uses metaprogramming to dynamically modify its properties at runtime.
+
+//class human{
+//    void play(){
+//        println "playing";
+//    }
+//}
+//human obj=new human();
+//obj.metaClass.gaming={name ->println "$name"}
+//obj.gaming("freefire");
